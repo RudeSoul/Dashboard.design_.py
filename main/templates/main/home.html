@@ -27,7 +27,7 @@
       <div class="profile flex items-center">
 
 
-        <div class="image overflow-hidden h-14 w-14 rounded-full border border-green-heading mr-4">
+        <div class="image overflow-hidden h-10 w-10 rounded-full border border-green-heading mr-4">
           <img src="https://picsum.photos/200/300?random=1" alt="John Doe" srcset="" class="object-cover">
         </div>
         <div class="content flex flex-col items-start">
@@ -38,7 +38,8 @@
 
         </div>
       </div>
-      <div class="dash mx-margin50"> <img src="{% static 'MarketHandle/images/dashHori.png' %}" alt="Logo"></div>
+      <div class="dash mx-margin50 h-8 overflow-hidden"> <img src="{% static 'MarketHandle/images/dashHori.png' %}"
+          class="object-cover" alt="Dash"></div>
       <div class="logout">
         <span class="iconify text-2xl text-iconColor" data-icon="majesticons:logout-line" data-inline="false"></span>
       </div>
@@ -48,7 +49,7 @@
   <div class="w-full shadow-navShadow h-emptyDiv"></div>
 
   <section class="flex">
-    <aside class="bg-white pl-2 pr-7  w-sidebarWidthshadow-navShadow">
+    <aside class="bg-white pl-2 pr-7  w-sidebarWidth shadow-navShadow sidebar-heading">
       <div class="sidebar__container mt-margin42 pl-6">
         <div class="sidebar-card">
           <h2 class="text-lightBlack font-medium text-14px ">Inventory</h2>
@@ -62,7 +63,7 @@
                 <div class="mr-margin20 text-xl">
                   <span class="iconify text-iconColor" data-icon="carbon:delivery-truck" data-inline="false"></span>
                 </div>
-                <h3 class="mr-margin70 text-xl text-primary font-semibold ">
+                <h3 class="text-xl text-primary font-semibold ">
                   Suppliers
                 </h3>
               </div>
@@ -101,7 +102,7 @@
                 <div class="mr-margin20 text-xl">
                   <span class="iconify text-iconColor" data-icon="carbon:product" data-inline="false"></span>
                 </div>
-                <h3 class="mr-margin70 text-xl text-primary font-semibold ">
+                <h3 class="text-xl text-primary font-semibold ">
                   Products
                 </h3>
               </div>
@@ -163,129 +164,125 @@
 
           </div>
 
+        </div>
+
+
+        <!-- <section class="flex"> -->
+        <div class="sidebar-card mt-24">
+          <h2 class="text-lightBlack font-medium text-14px ">Market Place</h2>
+
+
+          <div class="sidebar-card-item max-w-full mt-margin22 pt-3	">
+
+            <div class="flex justify-between items-center cursor-pointer "
+              onclick="toggleDisplay('templateChild','templateDownIcon')">
+              <div class="flex items-center">
+                <div class="mr-margin20 text-xl">
+                  <span class="iconify text-iconColor" data-icon="carbon:template" data-inline="false"></span>
+                </div>
+                <h3 class="text-xl text-primary font-semibold ">
+                  Templates
+                </h3>
+              </div>
+              <div class="text-iconLight text-base transform " id="templateDownIcon">
+                <span class="iconify" data-icon="akar-icons:chevron-down" data-inline="false"></span>
+              </div>
+            </div>
+            <div class="hidden pb-padingOne pt-3 pb-4  ml-1.5 my-3 border-l-2" id='templateChild'>
+              <div class="flex items-center ml-minus2 my-1 mb-3 ">
+                <div class="dash h-7 w-0.5 active:bg-green-500"></div>
+                <div
+                  class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded ">
+                  <p class="ml-6">
+                    My Templates
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="sidebar-card-item max-w-full mt-margin22 pt-3	">
+
+            <div class="flex justify-between items-center cursor-pointer"
+              onclick="toggleDisplay('listingChild','listingDownIcon')">
+              <div class="flex items-center">
+                <div class="mr-margin20 text-xl">
+                  <span class="iconify text-iconColor" data-icon="bi:list-task" data-inline="false"></span>
+                </div>
+                <h3 class="text-xl text-primary font-semibold ">
+                  Listing
+                </h3>
+              </div>
+              <div class="text-iconLight text-base " id="listingDownIcon">
+                <span class="iconify" data-icon="akar-icons:chevron-down" data-inline="false"></span>
+              </div>
+            </div>
+            <div class="hidden pb-padingOne pt-3 pb-4  ml-1.5 my-3 border-l-2" id="listingChild">
+              <div class="flex items-center ml-minus2 my-1 mb-3 ">
+                <div class="dash h-7 w-0.5 active:bg-green-500"></div>
+                <div
+                  class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded ">
+                  <p class="ml-6">
+                    Draft
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center ml-minus2 my-1 mb-3">
+                <div class="dash h-7 w-0.5 active:bg-green-500 "></div>
+                <div
+                  class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded">
+                  <p class="ml-6">
+                    Staged
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center ml-minus2 my-1 mb-3">
+                <div class="dash h-7 w-0.5 active:bg-green-500 "></div>
+                <div
+                  class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded">
+                  <p class="ml-6">
+                    Active
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center ml-minus2 my-1 mb-3">
+                <div class="dash h-7 w-0.5 active:bg-green-500 "></div>
+                <div
+                  class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded">
+                  <p class="ml-6">
+                    Inactive
+                  </p>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
 
 
         </div>
 
-
-        <section class="flex">
-          <div class="sidebar-card mt-24">
-            <h2 class="text-lightBlack font-medium text-14px ">Market Place</h2>
-
-
-            <div class="sidebar-card-item max-w-full mt-margin22 pt-3	">
-
-              <div class="flex justify-between items-center cursor-pointer "
-                onclick="toggleDisplay('templateChild','templateDownIcon')">
-                <div class="flex items-center">
-                  <div class="mr-margin20 text-xl">
-                    <span class="iconify text-iconColor" data-icon="carbon:template" data-inline="false"></span>
-                  </div>
-                  <h3 class="mr-margin70 text-xl text-primary font-semibold ">
-                    Templates
-                  </h3>
-                </div>
-                <div class="text-iconLight text-base transform " id="templateDownIcon">
-                  <span class="iconify" data-icon="akar-icons:chevron-down" data-inline="false"></span>
-                </div>
-              </div>
-              <div class="hidden pb-padingOne pt-3 pb-4  ml-1.5 my-3 border-l-2" id='templateChild'>
-                <div class="flex items-center ml-minus2 my-1 mb-3 ">
-                  <div class="dash h-7 w-0.5 active:bg-green-500"></div>
-                  <div
-                    class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded ">
-                    <p class="ml-6">
-                      My Templates
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="sidebar-card-item max-w-full mt-margin22 pt-3	">
-
-              <div class="flex justify-between items-center cursor-pointer"
-                onclick="toggleDisplay('listingChild','listingDownIcon')">
-                <div class="flex items-center">
-                  <div class="mr-margin20 text-xl">
-                    <span class="iconify text-iconColor" data-icon="bi:list-task" data-inline="false"></span>
-                  </div>
-                  <h3 class="mr-margin70 text-xl text-primary font-semibold ">
-                    Listing
-                  </h3>
-                </div>
-                <div class="text-iconLight text-base " id="listingDownIcon">
-                  <span class="iconify" data-icon="akar-icons:chevron-down" data-inline="false"></span>
-                </div>
-              </div>
-              <div class="hidden pb-padingOne pt-3 pb-4  ml-1.5 my-3 border-l-2" id="listingChild">
-                <div class="flex items-center ml-minus2 my-1 mb-3 ">
-                  <div class="dash h-7 w-0.5 active:bg-green-500"></div>
-                  <div
-                    class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded ">
-                    <p class="ml-6">
-                      Draft
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center ml-minus2 my-1 mb-3">
-                  <div class="dash h-7 w-0.5 active:bg-green-500 "></div>
-                  <div
-                    class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded">
-                    <p class="ml-6">
-                      Staged
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-center ml-minus2 my-1 mb-3">
-                  <div class="dash h-7 w-0.5 active:bg-green-500 "></div>
-                  <div
-                    class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded">
-                    <p class="ml-6">
-                      Active
-                    </p>
-                  </div>
-                </div>
-
-                <div class="flex items-center ml-minus2 my-1 mb-3">
-                  <div class="dash h-7 w-0.5 active:bg-green-500 "></div>
-                  <div
-                    class="child-container w-full ml-3 text-primary font-medium text-14px cursor:pointer cursor:pointer hover:bg-gray-200 leading-8 bg-opacity-60 rounded">
-                    <p class="ml-6">
-                      Inactive
-                    </p>
-                  </div>
-                </div>
-
-
-              </div>
-
-            </div>
-
-
-
-          </div>
-
       </div>
-
     </aside>
 
-
-    <main class="p-5 flex-1 bg-gray">
-      <section class="py-10 px-13 rounded bg-white">
+    <main class="p-3 flex-1 bg-gray">
+      <section class="py-3 px-6 rounded bg-white">
         <form>
           <div class="flex">
             <fieldset class="flex-1 space-x-15">
-              <select class="w-60 rounded form-select text-field leading-8 py-0 text-sm">
+              <select class="w-60 rounded form-select text-field leading-7 py-0 text-sm">
                 <option value="">Supplier</option>
                 {% for supplier in suppliers %}
                 <option value="{{ supplier }}">{{ supplier }}</option>
                 {% endfor %}
               </select>
 
-              <select class="w-60 rounded form-select text-field leading-8 py-0 text-sm">
+              <select class="w-60 rounded form-select text-field leading-7 py-0 text-sm">
                 <option value="">Supplier Category</option>
                 {% for category in supplier_categories %}
                 <option value="{{ category }}">{{ category }}</option>
@@ -294,11 +291,11 @@
             </fieldset>
 
             <fieldset class="flex flex-col">
-              <select class="w-60 rounded form-select text-field leading-8 py-0 text-sm">
+              <select class="w-60 rounded form-select text-field leading-7 py-0 text-sm">
                 <option value="">Assigned To</option>
               </select>
 
-              <select class="w-60 rounded form-select text-field leading-8 py-0 text-sm my-6">
+              <select class="w-60 rounded form-select text-field leading-7 py-0 text-sm mt-3">
                 <option value="">Publish To</option>
               </select>
             </fieldset>
@@ -309,47 +306,47 @@
               <fieldset>
                 <label class="pr-4 text-label font-medium">Price:</label>
                 <input type="text" placeholder="Min"
-                  class="rounded w-49 placeholder-primary text-field leading-8 py-0 text-sm" />
+                  class="rounded w-49 placeholder-primary text-field leading-7 py-0 text-sm" />
                 <label class="px-4 text-label font-medium">to</label>
                 <input type="text" placeholder="Max"
-                  class="rounded w-49 placeholder-primary text-field leading-8 py-0 text-sm" />
+                  class="rounded w-49 placeholder-primary text-field leading-7 py-0 text-sm" />
               </fieldset>
 
-              <fieldset class="my-6">
+              <fieldset class="my-3">
                 <label class="pr-4 text-label font-medium">Created:</label>
                 <input type="text" placeholder="2021-02-12"
-                  class="rounded w-49 placeholder-primary text-field leading-8 py-0 text-sm"
+                  class="rounded w-49 placeholder-primary text-field leading-7 py-0 text-sm"
                   onfocus="(this.type='date')" onfocusout="(this.type='text')" />
                 <label class="px-4 text-label font-medium">to</label>
                 <input type="text" placeholder="2021-02-12"
-                  class="rounded w-49 placeholder-primary text-field leading-8 py-0 text-sm"
+                  class="rounded w-49 placeholder-primary text-field leading-7 py-0 text-sm"
                   onfocus="(this.type='date')" onfocusout="(this.type='text')" />
               </fieldset>
 
               <fieldset>
                 <label class="pr-4 text-label font-medium">Updated:</label>
                 <input type="text" placeholder="2021-02-12"
-                  class="rounded w-49 placeholder-primary text-field leading-8 py-0 text-sm"
+                  class="rounded w-49 placeholder-primary text-field leading-7 py-0 text-sm"
                   onfocus=" (this.type='date' )" onfocusout="(this.type='text')" />
                 <label class="px-4 text-label font-medium">to</label>
                 <input type="text" placeholder="2021-02-12"
-                  class="rounded w-49 placeholder-primary text-field leading-8 py-0 text-sm"
+                  class="rounded w-49 placeholder-primary text-field leading-7 py-0 text-sm"
                   onfocus="(this.type='date')" onfocusout="(this.type='text')" />
               </fieldset>
             </div>
 
             <div class="self-end text-right flex-1">
               <input type="submit" value="Submit"
-                class="uppercase tracking-wider bg-primary rounded text-white text-sm leading-8 px-6">
+                class="uppercase tracking-wider bg-primary rounded text-white text-sm leading-7 px-6">
             </div>
           </div>
         </form>
       </section>
 
-      <section class="rounded bg-white mt-5 pb-13">
-        <div class="py-10 px-13 flex">
+      <section class="rounded bg-white mt-3 pb-6">
+        <div class="py-5 px-6 flex">
           <div class="flex-1">
-            <select class="w-60 rounded form-select text-field leading-8 py-0 text-sm mr-6">
+            <select class="w-60 rounded form-select text-field leading-7 py-0 text-sm mr-6">
               <option value="">Select Bulk Action</option>
               <option value="">Supplier</option>
               <option value="">Supplier</option>
@@ -357,103 +354,120 @@
             </select>
 
             <button type="button"
-              class="uppercase tracking-wider bg-primary rounded text-white text-sm leading-8 px-6">Go</button>
+              class="uppercase tracking-wider bg-primary rounded text-white text-sm leading-7 px-6">Go</button>
           </div>
 
           <div class="flex-1 text-right">
             <input type="search" placeholder="Search..."
-              class="rounded w-60 placeholder-primary text-field leading-8 py-0 text-sm" />
+              class="rounded w-60 placeholder-primary text-field leading-7 py-0 text-sm" />
           </div>
         </div>
 
-        <table class="table-auto mx-auto">
-          <thead>
-            <tr>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">
-                <input type="checkbox"
-                  class="hover:checked:bg-checkbox focus:checked:bg-checkbox checked:bg-checkbox checked:border-transparent focus:border-transparent hover:border-transparent" />
-              </th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">URL</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Main Image</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Supplier Info</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Product info</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Status</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Created At</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Updated At</th>
-              <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose"></th>
-            </tr>
-          </thead>
+        <div class="overflow-x-auto table-responsive">
+          <table class="table-auto mx-auto">
+            <thead>
+              <tr>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">
+                  <input type="checkbox"
+                    class="hover:checked:bg-checkbox focus:checked:bg-checkbox checked:bg-checkbox checked:border-transparent focus:border-transparent hover:border-transparent" />
+                </th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">URL</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Main Image</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Supplier Info</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Product info</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Status</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Created At</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose">Updated At</th>
+                <th class="text-table-head text-sm font-medium bg-table-head leading-extra-loose"></th>
+              </tr>
+            </thead>
 
-          <tbody>
-            {% for product in products %}
-            <tr class="hover:bg-table-hover">
-              <td class="p-6 px-7">
-                <input type="checkbox"
-                  class="hover:checked:bg-checkbox focus:checked:bg-checkbox checked:bg-checkbox checked:border-transparent focus:border-transparent hover:border-transparent" />
-              </td>
-              <td class="text-lg p-6 px-7">
-                <a href="#">
-                  <span class="iconify text-table-head" data-icon="majesticons:external-link-line"
-                    data-inline="false"></span>
-                </a>
-              </td>
-              <td class="p-6 px-7">
-                <div class="image overflow-hidden h-14 w-14 rounded">
-                  <img src="{{ product.image }}" width="60px" height="60px" class="object-cover" />
-                </div>
-              </td>
-              <td class="text-xs p-6 px-7 text-table-detail max-w-column">
-                <p>Supplier: {{ product.supplier_info.supplier }}</p>
-                <p>Supplier Category: {{ product.supplier_info.supplier }}</p>
-                <p>Stock status: {{ product.supplier_info.stock_status }}</p>
-                <p>Price: ${{ product.supplier_info.price }}</p>
-              </td>
-              <td class="text-xs p-6 px-7 text-table-detail max-w-column">
-                <p>Title: {{ product.product_info.title }}</p>
-                <p>Market Category: {{ product.product_info.category }}</p>
-              </td>
-              <td class="text-xs p-6 px-7">
-                {% if product.status == 'Draft' %}
-                <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-draft text-badge-draft">
-                  {{ product.status }}
-                </span>
-                {% elif product.status == 'Staged' %}
-                <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-staged text-badge-staged">
-                  {{ product.status }}
-                </span>
-                {% elif product.status == 'Active' %}
-                <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-active text-badge-active">
-                  {{ product.status }}
-                </span>
-                {% elif product.status == 'Inactive' %}
-                <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-inactive text-badge-inactive">
-                  {{ product.status }}
-                </span>
-                {% endif %}
-              </td>
-              <td class="text-xs p-6 px-7 text-table-detail">{{ product.created_at }}</td>
-              <td class="text-xs p-6 px-7 text-table-detail">{{ product.updated_at }}</td>
-              <td class="text-lg p-3 p-6 px-7">
-                <div class="flex flex-wrap">
-                  <div class="w-full text-center relative">
-                    <span class="iconify text-table-detail" data-icon="bi:three-dots-vertical" data-inline="false"
-                      onclick="openPopover(event,'popover-id')"></span>
-                    <div class="hidden border-0 mb-0 mr-6 block z-50 max-w-xs" id="popover-id">
-                      <div
-                        class="bg-white text-table-detail opacity-75 font-semibold p-3 mb-2 uppercase flex space-x-2 rounded-md">
-                        <span class="iconify" data-icon="akar-icons:pencil" data-inline="false"></span>
-                        <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
-                        <span class="iconify" data-icon="ri:delete-bin-6-line" data-inline="false"></span>
+            <tbody>
+              {% for product in products %}
+              <tr class="hover:bg-table-hover">
+                <td class="p-6">
+                  <input type="checkbox"
+                    class="hover:checked:bg-checkbox focus:checked:bg-checkbox checked:bg-checkbox checked:border-transparent focus:border-transparent hover:border-transparent" />
+                </td>
+                <td class="p-6 text-lg">
+                  <a href="#">
+                    <span class="iconify text-table-head" data-icon="majesticons:external-link-line"
+                      data-inline="false"></span>
+                  </a>
+                </td>
+                <td class="p-6">
+                  <div class="image overflow-hidden h-14 w-14 rounded">
+                    <img src="{{ product.image }}" width="60px" height="60px" class="object-cover" />
+                  </div>
+                </td>
+                <td class="p-6 text-xs text-table-detail max-w-column min-w-column">
+                  <p>Supplier: {{ product.supplier_info.supplier }}</p>
+                  <p>Supplier Category: {{ product.supplier_info.supplier }}</p>
+                  <p>Stock status: {{ product.supplier_info.stock_status }}</p>
+                  <p>Price: ${{ product.supplier_info.price }}</p>
+                </td>
+                <td class="p-6 text-xs text-table-detail max-w-column min-w-column">
+                  <p>Title: {{ product.product_info.title }}</p>
+                  <p>Market Category: {{ product.product_info.category }}</p>
+                </td>
+                <td class="p-6 text-xs">
+                  {% if product.status == 'Draft' %}
+                  <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-draft text-badge-draft">
+                    {{ product.status }}
+                  </span>
+                  {% elif product.status == 'Staged' %}
+                  <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-staged text-badge-staged">
+                    {{ product.status }}
+                  </span>
+                  {% elif product.status == 'Active' %}
+                  <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-active text-badge-active">
+                    {{ product.status }}
+                  </span>
+                  {% elif product.status == 'Inactive' %}
+                  <span class="leading-6 bg-gray rounded inline-block px-2.5 bg-badge-inactive text-badge-inactive">
+                    {{ product.status }}
+                  </span>
+                  {% endif %}
+                </td>
+                <td class="text-xs p-6 text-table-detail">{{ product.created_at }}</td>
+                <td class="text-xs p-6 text-table-detail">{{ product.updated_at }}</td>
+                <td class="text-lg p-3 p-6">
+                  <div class="flex flex-wrap">
+                    <div class="w-full text-center relative">
+                      <span class="iconify text-table-detail" data-icon="bi:three-dots-vertical" data-inline="false"
+                        onclick="openPopover(event,'popover-id')"></span>
+                      <div class="hidden border-0 mb-0 mr-6 block z-50 max-w-xs" id="popover-id">
+                        <div
+                          class="bg-white text-table-detail opacity-75 font-semibold p-3 mb-2 uppercase flex space-x-2 rounded-md">
+                          <span class="iconify" data-icon="akar-icons:pencil" data-inline="false"></span>
+                          <span class="iconify" data-icon="fa-regular:eye" data-inline="false"></span>
+                          <span class="iconify" data-icon="ri:delete-bin-6-line" data-inline="false"></span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <section class="mt-6">
+          <div class="flex justify-center items-center">
+            <button type="button" class="bg-primary rounded text-white text-lg p-1">
+              <span class="iconify" data-icon="bi:chevron-left" data-inline="false"></span>
+            </button>
+            <label class="px-2">Page</label>
+            <input class="rounded w-8 text-center placeholder-primary text-field leading-6 py-0 px-1 text-sm"
+              type="text" value="{{ page.pageNumber }}" />
+            <label class="px-2"> of {{ page.totalPages }}</label>
+            <button type="button" class="bg-primary rounded text-white text-lg p-1">
+              <span class="iconify" data-icon="bi:chevron-right" data-inline="false"></span>
+            </button>
+          </div>
+        </section>
       </section>
     </main>
 

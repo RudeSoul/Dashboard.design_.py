@@ -64,7 +64,10 @@ module.exports = {
         sidebarWidth: "16.8125rem",
       },
       maxWidth: {
-        column: "17rem", // 200px
+        column: "17rem", // 272px
+      },
+      minWidth: {
+        column: "15rem", // 240px
       },
       outline: {
         grey: "1px solid #DDDDDD",
@@ -94,7 +97,7 @@ module.exports = {
         "extra-loose": "3.5rem",
       },
       fontSize: {
-        profileName: ["16px", "19px"],
+        profileName: ["16px", "12px"],
         "14px": "0.875rem", //14px
         "20px": "1.25rem", //20px
         "2xl": "1.75rem", //28px
@@ -105,7 +108,6 @@ module.exports = {
         margin22: "1.375rem", //22 px
         margin42: "2.625rem", // 42px
         margin50: "3.125rem", //50px
-        margin70: "4.375rem", //70px
       },
       zIndex: {
         m1: -1,

@@ -124,11 +124,18 @@ products = [
     },
 ]
 
+page = {
+    'pageNumber': 1,
+    'totalPages': 5,
+}
+
+
 def homepage(request):
     context = {
         'suppliers': suppliers,
         'supplier_categories': supplier_categories,
         'products': products,
+        'page': page,
     }
 
     return render(request=request, template_name="main/home.html", context=context)
